@@ -13,11 +13,11 @@ from sklearn.metrics import accuracy_score, precision_score, f1_score
 data = pd.read_csv(path/emails.csv)
 data = DataFrame(data)                                           #Creating a dataframe
 data.head()                                                      #Printing the first five rows of the dataframe
-print(data.shape)                                                    #Printing the shape of the dataframe
+print(data.shape)                                                #Printing the shape of the dataframe
 
 #Preprocessing
 data.drop_duplicates(inplace = True)                             #Deleting duplicates from the dataframe
-print(data.shape)                                                    #Checking if the duplicates have been removed by printing out the shape
+print(data.shape)                                                #Checking if the duplicates have been removed by printing out the shape
 data['text'] = data['text'].map(lambda text: text[8:])           #Since every text message starts with 'SUBJECT', deleting that word 
                                                                  #in every text row
   
